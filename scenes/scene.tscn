@@ -1,14 +1,14 @@
 [gd_scene load_steps=28 format=3 uid="uid://bv7dsd2m7qlaq"]
 
-[ext_resource type="Script" path="res://Scripts/rotate.gd" id="1_k7e4a"]
-[ext_resource type="PackedScene" uid="uid://c3yabv6fibd2n" path="res://Scenes/psx_terrain.tscn" id="2_5fcxn"]
-[ext_resource type="Shader" path="res://Shaders/playstation_one.gdshader" id="3_025t4"]
-[ext_resource type="PackedScene" uid="uid://b5ellqltyo0oc" path="res://Scenes/bridge.tscn" id="4_k4os8"]
-[ext_resource type="Script" path="res://Scripts/player_controller.gd" id="5_78mew"]
-[ext_resource type="Script" path="res://Scripts/camera_controller.gd" id="6_awl02"]
-[ext_resource type="AudioStream" uid="uid://x0vfjoxerpfb" path="res://Audio/footstep.wav" id="7_m4t70"]
-[ext_resource type="AudioStream" uid="uid://coppaqgawptht" path="res://Audio/wind.wav" id="8_1oqbq"]
-[ext_resource type="AudioStream" uid="uid://2qrkdui7n1cs" path="res://Audio/pavane_mixdown.mp3" id="10_re5t5"]
+[ext_resource type="Script" uid="uid://db4ur26lcyde5" path="res://psx/scripts/rotate.gd" id="1_k7e4a"]
+[ext_resource type="PackedScene" uid="uid://c3yabv6fibd2n" path="res://scenes/psx_terrain.tscn" id="2_5fcxn"]
+[ext_resource type="Shader" uid="uid://bkt5prw2anqmq" path="res://psx/shaders/playstation_one.gdshader" id="3_025t4"]
+[ext_resource type="PackedScene" uid="uid://b5ellqltyo0oc" path="res://scenes/bridge.tscn" id="4_k4os8"]
+[ext_resource type="Script" uid="uid://qebcagpqh77l" path="res://psx/scripts/player_controller.gd" id="5_78mew"]
+[ext_resource type="Script" uid="uid://bp5xs77vhdfi5" path="res://psx/scripts/camera_controller.gd" id="6_awl02"]
+[ext_resource type="AudioStream" uid="uid://byq3u6rdvm6hr" path="res://psx/audio/footstep.wav" id="7_m4t70"]
+[ext_resource type="AudioStream" uid="uid://c8rxg67fv5yu1" path="res://psx/audio/wind.wav" id="8_1oqbq"]
+[ext_resource type="AudioStream" uid="uid://crn14x084kncp" path="res://psx/audio/pavane_mixdown.mp3" id="10_re5t5"]
 
 [sub_resource type="Environment" id="Environment_teuiq"]
 background_energy_multiplier = 0.0

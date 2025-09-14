@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpm0s1xxb454d"]
 
-[ext_resource type="Shader" path="res://Shaders/playstation_one.gdshader" id="1_wdiit"]
+[ext_resource type="Shader" uid="uid://bkt5prw2anqmq" path="res://psx/shaders/playstation_one.gdshader" id="1_wdiit"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_e8xkt"]
 

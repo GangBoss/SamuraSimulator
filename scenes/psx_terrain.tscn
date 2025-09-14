@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3yabv6fibd2n"]
 
-[ext_resource type="PackedScene" uid="uid://cxs0wiollol6t" path="res://Models/psx_terrain.glb" id="1_kqehl"]
-[ext_resource type="Material" uid="uid://jmnyxcjmynnv" path="res://Materials/psx.material" id="2_dfuxv"]
+[ext_resource type="PackedScene" path="res://Models/psx_terrain.glb" id="1_kqehl"]
+[ext_resource type="Material" uid="uid://jmnyxcjmynnv" path="res://psx/materials/psx.material" id="2_dfuxv"]
 
 [node name="psx_terrain" instance=ExtResource("1_kqehl")]
 

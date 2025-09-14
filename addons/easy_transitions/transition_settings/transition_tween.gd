@@ -1,5 +1,4 @@
 @tool
-@icon("res://addons/easy_transitions/tween_settings/icon.png")
 class_name TransitionTween extends Resource
 
 

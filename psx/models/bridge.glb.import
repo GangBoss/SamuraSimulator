@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bljt8mdx2y6ns"
-path="res://.godot/imported/bridge.glb-41883dce583aaeafbaaa210ea198b0d7.scn"
+uid="uid://bxlhh3sj1rr4b"
+path="res://.godot/imported/bridge.glb-d5cb55d9a93ce22e39815d9fbead987e.scn"
 
 [deps]
 
-source_file="res://psx/models/bridge.glb"
-dest_files=["res://.godot/imported/bridge.glb-41883dce583aaeafbaaa210ea198b0d7.scn"]
+source_file="res://psx/Models/bridge.glb"
+dest_files=["res://.godot/imported/bridge.glb-d5cb55d9a93ce22e39815d9fbead987e.scn"]
 
 [params]
 
