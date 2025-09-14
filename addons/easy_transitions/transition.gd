@@ -67,14 +67,14 @@ func outro(settings : TransitionSettings = TransitionPresets.get_fast_fade()) ->
 
 
 func _intro_part(settings : TransitionSettings):
-	var input_state := InputState.current_mode
-	InputState.current_mode = InputState.InputMode.LOCKED
+	#var input_state := InputState.current_mode
+	#InputState.current_mode = InputState.InputMode.LOCKED
 	
 	is_playing = true
 	layer = settings.layer
 	await intro(settings)
 	
-	InputState.current_mode = input_state
+	#InputState.current_mode = input_state
 
 
 func _outro_part(settings : TransitionSettings):
@@ -145,23 +145,6 @@ func pop_node(node : Node, settings : TransitionSettings = TransitionPresets.get
 
 
 var _spawn_point := ""
-
-
-func move_player_to_scene(scene_path: String, spawn_point: String, settings: TransitionSettings = TransitionPresets.get_fast_fade()) -> void:
-	if is_playing == true:
-		return
-	await _intro_part(settings)
-	
-	GlobalLogger.debug("Changing scene to " + scene_path)
-	# I set current_scene_path here because multiplayer manager
-	# should know about the scene from the beginning
-	SaveSystem.current_save.current_scene_path = scene_path
-	_spawn_point = spawn_point
-	# game manager will read current_scene_path on ready
-	get_tree().change_scene_to_file("uid://d4ayp57pcyssu")
-	scene_changed.emit()
-	
-	_outro_part(settings)
 
 
 func get_and_clear_spawn_point() -> String:

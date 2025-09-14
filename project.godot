@@ -14,6 +14,12 @@ config/name="SamuraSimulator"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LimboConsole="*res://addons/limbo_console/limbo_console.gd"
+Transition="*res://addons/easy_transitions/transition.gd"
+GlobalLogger="*res://addons/websocket_component/logger.gd"
+
 [dotnet]
 
 project/assembly_name="SamuraSimulator"
