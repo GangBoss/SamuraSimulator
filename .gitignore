@@ -1,21 +1,11 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
+.nomedia
 
-/addons
-/Ignored
-/ImageEditor
-/Build
-
-icon.svg*
-*.tmp
-*.import
+# Godot-specific ignores
 .import/
 export.cfg
 export_credentials.cfg
-export_presets.cfg
-
-.nomedia
 
 # Imported translations (automatically generated from CSV files)
 *.translation

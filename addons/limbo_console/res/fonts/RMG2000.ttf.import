@@ -1,0 +1,41 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://ce78gma66jnl8"
+path="res://.godot/imported/RMG2000.ttf-295f10a5d91631d8e39c68a0c53d4dc6.fontdata"
+
+[deps]
+
+source_file="res://addons/limbo_console/res/fonts/RMG2000.ttf"
+dest_files=["res://.godot/imported/RMG2000.ttf-295f10a5d91631d8e39c68a0c53d4dc6.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=0
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=1
+msdf_size=78
+allow_system_fallback=true
+force_autohinter=false
+hinting=0
+subpixel_positioning=0
+keep_rounding_remainders=false
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0),
+&"variation_embolden": 0.0
+}]
+language_support={}
+script_support={}
+opentype_features={}
