@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpm0s1xxb454d"]
+
+[ext_resource type="Shader" path="res://Shaders/playstation_one.gdshader" id="1_wdiit"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_e8xkt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w4mgq"]
+load_path = "res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tmqrb"]
+render_priority = 0
+shader = ExtResource("1_wdiit")
+shader_parameter/billboard = false
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/vertex_snapping = false
+shader_parameter/affine_texture_mapping = false
+shader_parameter/color_texture = SubResource("CompressedTexture2D_w4mgq")
+shader_parameter/add_fog = false
+shader_parameter/fog_color = Color(0.42, 0.42, 0.45, 1)
+shader_parameter/fog_start_end = Vector2(10, 100)
+shader_parameter/add_dynamic_vertex_lighting = false
+shader_parameter/light_direction = Vector3(0, 1, 0)
+shader_parameter/light_intensity = 1.0
+shader_parameter/ambient_light = Color(0, 0, 0, 1)
+shader_parameter/add_dither = false
+shader_parameter/dither_spread = 1.0
+shader_parameter/dither_gamma = 1.0
+
+[sub_resource type="GDScript" id="GDScript_gjm5p"]
+script/source = "extends MeshInstance3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	rotation += Vector3(deg_to_rad(30), deg_to_rad(30), deg_to_rad(30)) * delta
+"
+
+[sub_resource type="QuadMesh" id="QuadMesh_8cxkq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s317m"]
+render_priority = 0
+shader = ExtResource("1_wdiit")
+shader_parameter/billboard = false
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/vertex_snapping = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/color_texture = SubResource("CompressedTexture2D_w4mgq")
+shader_parameter/add_fog = false
+shader_parameter/fog_color = Color(0.42, 0.42, 0.45, 1)
+shader_parameter/fog_start_end = Vector2(10, 100)
+shader_parameter/add_dynamic_vertex_lighting = false
+shader_parameter/light_direction = Vector3(0, 1, 0)
+shader_parameter/light_intensity = 1.0
+shader_parameter/ambient_light = Color(0, 0, 0, 1)
+shader_parameter/add_dither = false
+shader_parameter/dither_spread = 1.0
+shader_parameter/dither_gamma = 1.0
+
+[sub_resource type="Environment" id="Environment_gp0tv"]
+background_energy_multiplier = 0.0
+ambient_light_energy = 0.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_rqmq6"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.977184, -0.0427187, -0.208055, 0.190567, 0.608883, 0.77003, 0.0937867, -0.792109, 0.603132, -0.797423, 0, 0)
+visible = false
+mesh = SubResource("BoxMesh_e8xkt")
+surface_material_override/0 = SubResource("ShaderMaterial_tmqrb")
+script = SubResource("GDScript_gjm5p")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("QuadMesh_8cxkq")
+surface_material_override/0 = SubResource("ShaderMaterial_s317m")
+script = SubResource("GDScript_gjm5p")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.44516)
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gp0tv")
+camera_attributes = SubResource("CameraAttributesPractical_rqmq6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8438, 0, -3.24562)

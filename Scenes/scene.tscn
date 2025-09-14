@@ -1,0 +1,258 @@
+[gd_scene load_steps=28 format=3 uid="uid://bv7dsd2m7qlaq"]
+
+[ext_resource type="Script" path="res://Scripts/rotate.gd" id="1_k7e4a"]
+[ext_resource type="PackedScene" uid="uid://c3yabv6fibd2n" path="res://Scenes/psx_terrain.tscn" id="2_5fcxn"]
+[ext_resource type="Shader" path="res://Shaders/playstation_one.gdshader" id="3_025t4"]
+[ext_resource type="PackedScene" uid="uid://b5ellqltyo0oc" path="res://Scenes/bridge.tscn" id="4_k4os8"]
+[ext_resource type="Script" path="res://Scripts/player_controller.gd" id="5_78mew"]
+[ext_resource type="Script" path="res://Scripts/camera_controller.gd" id="6_awl02"]
+[ext_resource type="AudioStream" uid="uid://x0vfjoxerpfb" path="res://Audio/footstep.wav" id="7_m4t70"]
+[ext_resource type="AudioStream" uid="uid://coppaqgawptht" path="res://Audio/wind.wav" id="8_1oqbq"]
+[ext_resource type="AudioStream" uid="uid://2qrkdui7n1cs" path="res://Audio/pavane_mixdown.mp3" id="10_re5t5"]
+
+[sub_resource type="Environment" id="Environment_teuiq"]
+background_energy_multiplier = 0.0
+ambient_light_energy = 0.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ge1bv"]
+
+[sub_resource type="Shader" id="Shader_4pmva"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0igg6"]
+render_priority = 0
+shader = SubResource("Shader_4pmva")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ti2t3"]
+material = SubResource("ShaderMaterial_0igg6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d6x5a"]
+size = Vector3(301.83, 4.57336, 66.8489)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xdvk6"]
+subdivide_width = 50
+subdivide_depth = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_te28y"]
+render_priority = 0
+shader = ExtResource("3_025t4")
+shader_parameter/billboard = false
+shader_parameter/tint = Color(0.0980392, 0.0980392, 0.113725, 1)
+shader_parameter/vertex_snapping = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/add_fog = true
+shader_parameter/fog_color = Color(0.219608, 0.211765, 0.172549, 1)
+shader_parameter/fog_start_end = Vector2(0, 50)
+shader_parameter/add_dynamic_vertex_lighting = false
+shader_parameter/light_direction = Vector3(0, 1, 0)
+shader_parameter/light_intensity = 1.0
+shader_parameter/ambient_light = Color(0, 0, 0, 1)
+shader_parameter/add_dither = true
+shader_parameter/dither_spread = 1.0
+shader_parameter/dither_gamma = 2.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lkm78"]
+render_priority = 0
+shader = ExtResource("3_025t4")
+shader_parameter/billboard = false
+shader_parameter/tint = Color(0.219608, 0.211765, 0.172549, 1)
+shader_parameter/vertex_snapping = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/add_fog = true
+shader_parameter/fog_color = Color(0.22, 0.21076, 0.1738, 1)
+shader_parameter/fog_start_end = Vector2(10, 100)
+shader_parameter/add_dynamic_vertex_lighting = true
+shader_parameter/light_direction = Vector3(0, 1, 0)
+shader_parameter/light_intensity = 1.0
+shader_parameter/ambient_light = Color(0, 0, 0, 1)
+shader_parameter/add_dither = true
+shader_parameter/dither_spread = 1.0
+shader_parameter/dither_gamma = 2.2
+
+[sub_resource type="QuadMesh" id="QuadMesh_wr3iy"]
+material = SubResource("ShaderMaterial_lkm78")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1ryse"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bewe8"]
+size = Vector3(9.2478, 1, 40.3705)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_puk5g"]
+size = Vector3(145.317, 16.4973, 116.17)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1wngv"]
+radius = 1.0
+height = 5.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qktft"]
+emission_shape_offset = Vector3(0, 4, 0)
+emission_shape_scale = Vector3(20, 5, 20)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(2.5, -1, -0.1)
+spread = 21.774
+initial_velocity_min = 8.0
+initial_velocity_max = 13.5
+gravity = Vector3(0, 0, 0)
+turbulence_noise_strength = 0.1
+turbulence_influence_min = 0.251
+turbulence_influence_max = 0.298
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6c344"]
+render_priority = 0
+shader = ExtResource("3_025t4")
+shader_parameter/billboard = true
+shader_parameter/tint = Color(0.340281, 0.327697, 0.307616, 1)
+shader_parameter/vertex_snapping = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/add_fog = false
+shader_parameter/fog_color = Color(0.25, 0.242083, 0.2025, 1)
+shader_parameter/fog_start_end = Vector2(0, 5)
+shader_parameter/add_dynamic_vertex_lighting = false
+shader_parameter/light_direction = Vector3(0, 1, 0)
+shader_parameter/light_intensity = 1.0
+shader_parameter/ambient_light = Color(0, 0, 0, 1)
+shader_parameter/add_dither = true
+shader_parameter/dither_spread = 1.0
+shader_parameter/dither_gamma = 2.2
+
+[sub_resource type="QuadMesh" id="QuadMesh_cpdto"]
+material = SubResource("ShaderMaterial_6c344")
+size = Vector2(0.075, 0.075)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_4woky"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.723449, 0.690377, 0, -0.690377, 0.723449, 0.954669, -1.33543, 3.35693)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_teuiq")
+camera_attributes = SubResource("CameraAttributesPractical_ge1bv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.604627, 0.796509, 0, -0.796509, 0.604627, 0, 0, 0, 1, 0.303653, 0, 0)
+visible = false
+mesh = SubResource("BoxMesh_ti2t3")
+script = ExtResource("1_k7e4a")
+rotation_speed = Vector3(20, 20, 20)
+
+[node name="psx_terrain" parent="." instance=ExtResource("2_5fcxn")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="psx_terrain"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="psx_terrain/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0992, -1.11343, 92.6168)
+shape = SubResource("BoxShape3D_d6x5a")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="psx_terrain/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0992, -0.757253, -89.6656)
+shape = SubResource("BoxShape3D_d6x5a")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(250, 0, 0, 0, 100, 0, 0, 0, 45, 0, -2.55434, -1.48462)
+mesh = SubResource("PlaneMesh_xdvk6")
+surface_material_override/0 = SubResource("ShaderMaterial_te28y")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-9.73488e-06, -500, 0, 222.708, -2.18557e-05, 0, 0, 0, 200, 0, 0, -221.176)
+mesh = SubResource("QuadMesh_wr3iy")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-500, 0, 3.01992e-05, 0, 241.607, 0, -7.54979e-05, 0, -200, 0, 0, 219.453)
+mesh = SubResource("QuadMesh_wr3iy")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.65256e-13, 2.18557e-05, 200, 243.502, -2.18557e-05, -5.00541e-19, 1.06438e-05, 500, -8.74228e-06, -213.338, 0, -3.61224)
+mesh = SubResource("QuadMesh_wr3iy")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.10459e-13, 2.18557e-05, -200, 214.823, -2.18557e-05, 1.08458e-20, -9.39021e-06, -500, -8.74228e-06, 228.131, 0, -2.60207)
+mesh = SubResource("QuadMesh_wr3iy")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(500, 0, 0, 0, -2.18557e-05, -200, 0, 500, -8.74228e-06, 0, 96.845, -12.8846)
+mesh = SubResource("QuadMesh_wr3iy")
+
+[node name="bridge" parent="." instance=ExtResource("4_k4os8")]
+
+[node name="Bridge Floor" type="StaticBody3D" parent="bridge"]
+physics_material_override = SubResource("PhysicsMaterial_1ryse")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bridge/Bridge Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.181172, 2.61842, 3.00051)
+shape = SubResource("BoxShape3D_bewe8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="bridge/Bridge Floor"]
+transform = Transform3D(1, 0, 0, 0, 0.998629, -0.052336, 0, 0.052336, 0.998629, -0.181172, 1.54298, 43.3257)
+shape = SubResource("BoxShape3D_bewe8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="bridge/Bridge Floor"]
+transform = Transform3D(1, 0, 0, 0, 0.999123, 0.0418756, 0, -0.0418756, 0.999123, -0.181, 1.76955, -37.3497)
+shape = SubResource("BoxShape3D_bewe8")
+
+[node name="Bridge Walls" type="StaticBody3D" parent="bridge"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bridge/Bridge Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.2377, 2.14919, 1.73981)
+shape = SubResource("BoxShape3D_puk5g")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="bridge/Bridge Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.8837, 2.14919, 1.73981)
+shape = SubResource("BoxShape3D_puk5g")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08832, -93.1909)
+script = ExtResource("5_78mew")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 2.26606, 0)
+fov = 60.0
+size = 2.50021
+script = ExtResource("6_awl02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_1wngv")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.99961, 0)
+amount = 5000
+lifetime = 2.0
+preprocess = 1.0
+speed_scale = 1.1
+interpolate = false
+process_material = SubResource("ParticleProcessMaterial_qktft")
+draw_pass_1 = SubResource("QuadMesh_cpdto")
+
+[node name="Feet" type="AudioStreamPlayer3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.911508, 0)
+stream = ExtResource("7_m4t70")
+volume_db = -10.191
+max_db = -4.395
+
+[node name="Wind" type="AudioStreamPlayer3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.911508, 0)
+stream = ExtResource("8_1oqbq")
+max_db = 0.0
+
+[node name="Music" type="AudioStreamPlayer3D" parent="Player"]
+stream = ExtResource("10_re5t5")
+volume_db = -20.456
+
+[node name="World Bounds" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Bounds"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.3384, 118.198)
+shape = SubResource("WorldBoundaryShape3D_4woky")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="World Bounds"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 11.338, -105.759)
+shape = SubResource("WorldBoundaryShape3D_4woky")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="World Bounds"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 92.1905, 11.3384, -3.25496)
+shape = SubResource("WorldBoundaryShape3D_4woky")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="World Bounds"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -96.2363, 11.3384, -3.25496)
+shape = SubResource("WorldBoundaryShape3D_4woky")

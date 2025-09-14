@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5ellqltyo0oc"]
+
+[ext_resource type="PackedScene" uid="uid://bcnwa4p24a404" path="res://Models/bridge.glb" id="1_u24er"]
+[ext_resource type="Material" uid="uid://jmnyxcjmynnv" path="res://Materials/psx.material" id="2_d0i5k"]
+
+[node name="bridge" instance=ExtResource("1_u24er")]
+
+[node name="Right Supports_002" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_d0i5k")
