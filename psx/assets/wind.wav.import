@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://c8rxg67fv5yu1"
-path="res://.godot/imported/wind.wav-148ab0871c6796f9e14d76d194aa599a.sample"
+uid="uid://2sw1uqg32ro1"
+path="res://.godot/imported/wind.wav-751fadb3a73bfe0155d2f5d86b6a1d37.sample"
 
 [deps]
 
-source_file="res://psx/audio/wind.wav"
-dest_files=["res://.godot/imported/wind.wav-148ab0871c6796f9e14d76d194aa599a.sample"]
+source_file="res://psx/assets/wind.wav"
+dest_files=["res://.godot/imported/wind.wav-751fadb3a73bfe0155d2f5d86b6a1d37.sample"]
 
 [params]
 

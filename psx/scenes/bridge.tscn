@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5ellqltyo0oc"]
 
-[ext_resource type="PackedScene" path="res://Models/bridge.glb" id="1_u24er"]
-[ext_resource type="Material" uid="uid://jmnyxcjmynnv" path="res://psx/materials/psx.material" id="2_d0i5k"]
+[ext_resource type="PackedScene" uid="uid://bnyh4euk21xfk" path="res://psx/assets/bridge.glb" id="1_u24er"]
+[ext_resource type="Material" uid="uid://jmnyxcjmynnv" path="res://psx/assets/psx.material" id="2_d0i5k"]
 
 [node name="bridge" instance=ExtResource("1_u24er")]
 

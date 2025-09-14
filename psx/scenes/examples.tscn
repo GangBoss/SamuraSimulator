@@ -1,20 +1,19 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpm0s1xxb454d"]
 
-[ext_resource type="Shader" uid="uid://bkt5prw2anqmq" path="res://psx/shaders/playstation_one.gdshader" id="1_wdiit"]
+[ext_resource type="Shader" uid="uid://cbikvxq70v4nb" path="res://shaders/playstation_one.gdshader" id="1_qejdk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_e8xkt"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w4mgq"]
-load_path = "res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tmqrb"]
 render_priority = 0
-shader = ExtResource("1_wdiit")
+shader = ExtResource("1_qejdk")
 shader_parameter/billboard = false
+shader_parameter/color_texture = SubResource("CompressedTexture2D_w4mgq")
 shader_parameter/tint = Color(1, 1, 1, 1)
 shader_parameter/vertex_snapping = false
 shader_parameter/affine_texture_mapping = false
-shader_parameter/color_texture = SubResource("CompressedTexture2D_w4mgq")
 shader_parameter/add_fog = false
 shader_parameter/fog_color = Color(0.42, 0.42, 0.45, 1)
 shader_parameter/fog_start_end = Vector2(10, 100)
@@ -44,12 +43,12 @@ func _process(delta: float) -> void:
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s317m"]
 render_priority = 0
-shader = ExtResource("1_wdiit")
+shader = ExtResource("1_qejdk")
 shader_parameter/billboard = false
+shader_parameter/color_texture = SubResource("CompressedTexture2D_w4mgq")
 shader_parameter/tint = Color(1, 1, 1, 1)
 shader_parameter/vertex_snapping = true
 shader_parameter/affine_texture_mapping = true
-shader_parameter/color_texture = SubResource("CompressedTexture2D_w4mgq")
 shader_parameter/add_fog = false
 shader_parameter/fog_color = Color(0.42, 0.42, 0.45, 1)
 shader_parameter/fog_start_end = Vector2(10, 100)
@@ -67,7 +66,7 @@ ambient_light_energy = 0.0
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_rqmq6"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.977184, -0.0427187, -0.208055, 0.190567, 0.608883, 0.77003, 0.0937867, -0.792109, 0.603132, -0.797423, 0, 0)

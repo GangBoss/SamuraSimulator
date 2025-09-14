@@ -1,14 +1,14 @@
 [gd_scene load_steps=28 format=3 uid="uid://bv7dsd2m7qlaq"]
 
-[ext_resource type="Script" uid="uid://db4ur26lcyde5" path="res://psx/scripts/rotate.gd" id="1_k7e4a"]
-[ext_resource type="PackedScene" uid="uid://c3yabv6fibd2n" path="res://scenes/psx_terrain.tscn" id="2_5fcxn"]
-[ext_resource type="Shader" uid="uid://bkt5prw2anqmq" path="res://psx/shaders/playstation_one.gdshader" id="3_025t4"]
-[ext_resource type="PackedScene" uid="uid://b5ellqltyo0oc" path="res://scenes/bridge.tscn" id="4_k4os8"]
-[ext_resource type="Script" uid="uid://qebcagpqh77l" path="res://psx/scripts/player_controller.gd" id="5_78mew"]
-[ext_resource type="Script" uid="uid://bp5xs77vhdfi5" path="res://psx/scripts/camera_controller.gd" id="6_awl02"]
-[ext_resource type="AudioStream" uid="uid://byq3u6rdvm6hr" path="res://psx/audio/footstep.wav" id="7_m4t70"]
-[ext_resource type="AudioStream" uid="uid://c8rxg67fv5yu1" path="res://psx/audio/wind.wav" id="8_1oqbq"]
-[ext_resource type="AudioStream" uid="uid://crn14x084kncp" path="res://psx/audio/pavane_mixdown.mp3" id="10_re5t5"]
+[ext_resource type="Script" uid="uid://cfas5dfcmlptm" path="res://psx/scenes/scripts/rotate.gd" id="1_k7e4a"]
+[ext_resource type="PackedScene" uid="uid://c3yabv6fibd2n" path="res://psx/scenes/psx_terrain.tscn" id="2_5fcxn"]
+[ext_resource type="Shader" uid="uid://cbikvxq70v4nb" path="res://shaders/playstation_one.gdshader" id="3_025t4"]
+[ext_resource type="PackedScene" uid="uid://b5ellqltyo0oc" path="res://psx/scenes/bridge.tscn" id="4_k4os8"]
+[ext_resource type="Script" uid="uid://dyqvuumjxdseu" path="res://psx/scenes/scripts/player_controller.gd" id="5_78mew"]
+[ext_resource type="Script" uid="uid://2u200cgumf1h" path="res://psx/scenes/scripts/camera_controller.gd" id="6_awl02"]
+[ext_resource type="AudioStream" uid="uid://dljrykyjrujrk" path="res://psx/assets/footstep.wav" id="7_m4t70"]
+[ext_resource type="AudioStream" uid="uid://2sw1uqg32ro1" path="res://psx/assets/wind.wav" id="8_1oqbq"]
+[ext_resource type="AudioStream" uid="uid://dmyk4f35tmet4" path="res://psx/assets/pavane_mixdown.mp3" id="10_re5t5"]
 
 [sub_resource type="Environment" id="Environment_teuiq"]
 background_energy_multiplier = 0.0
@@ -97,7 +97,7 @@ turbulence_noise_strength = 0.1
 turbulence_influence_min = 0.251
 turbulence_influence_max = 0.298
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6c344"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kwf04"]
 render_priority = 0
 shader = ExtResource("3_025t4")
 shader_parameter/billboard = true
@@ -116,7 +116,7 @@ shader_parameter/dither_spread = 1.0
 shader_parameter/dither_gamma = 2.2
 
 [sub_resource type="QuadMesh" id="QuadMesh_cpdto"]
-material = SubResource("ShaderMaterial_6c344")
+material = SubResource("ShaderMaterial_kwf04")
 size = Vector2(0.075, 0.075)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_4woky"]

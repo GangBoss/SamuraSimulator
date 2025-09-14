@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ddubds1nkqb45"
-path="res://.godot/imported/psx_terrain.glb-ca717994a070a716fc735dfc3ca0b769.scn"
+uid="uid://3i72pu037rjo"
+path="res://.godot/imported/psx_terrain.glb-262f3f3475e62a2f0ccda2692fc4bcf8.scn"
 
 [deps]
 
-source_file="res://psx/Models/psx_terrain.glb"
-dest_files=["res://.godot/imported/psx_terrain.glb-ca717994a070a716fc735dfc3ca0b769.scn"]
+source_file="res://psx/assets/psx_terrain.glb"
+dest_files=["res://.godot/imported/psx_terrain.glb-262f3f3475e62a2f0ccda2692fc4bcf8.scn"]
 
 [params]
 
